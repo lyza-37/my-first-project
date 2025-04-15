@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cat World</title>
+  <style>
+    body {
+    font-family: 'Segoe UI' sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff6b81;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cat-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-buttom: 40px;
+}
+
+.cat-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  width: 250px;
+}
+
+.cat-box img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.cat-box p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #ff6b81;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4757;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h1>Welcome to Cat World</h1>
+  <p class="subtitle">The purr-fect to enjoy ctas</p>
+  
+  <div class="cat-gallery">
+    <div class="cat-box">
+      <img src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg" alt="Maine Coon">
+      <p>Maine Coon</p>
+    </div>
+    <div class="cat-box">
+      <img src="https://cdn2.thecatapi.com/images/B1SVZ2Lm-.jpg" alt="Sphynx">
+      <p>Sphynx</p>
+    </div>
+   <div class="cat-box">
+      <img src="https://cdn2.thecatapi.com/images/Byz6gQEqx.jpg" alt="Persian">
+      <p>Persian</p>
+    </div>
+  </div>
+  
+  <button onclick="showCatFact()"Show Random Cat Fact</button>
+  
+  <script>
+   const facts = [
+    "Cats sleep 70% of their lives."
+    "A group of cats is called a clowder.",
+    "The oldest cat lived to be 38 years old!",
+    "Cats can rotate their ears 180 degrees.",
+    "Every cat's nose print is unique - like a fingerprint!"
+];
+
+  function showCatFact() {
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+    alert(fact);
+  }
+ </script>
+
+</body>
+   </html>
